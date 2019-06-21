@@ -4,11 +4,11 @@
   "description": "Creating a template based config for multiple systems",
   "main": "creator.js",
   "license": "MIT",
-  "email": "thorsten.moeller@atos.net",
+  "email": "tmoeller70@icloud.com",
   "repository": "npm/npm",
   "private": true,
   "dependencies": {
-    "csv-array": "0.0.22",
+    "csv-array": "^0.0.22",
     "mysql": "^2.16.0"
   },
   "scripts": {}
