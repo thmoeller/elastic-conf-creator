@@ -1,9 +1,10 @@
 {
-  "name": "ELK_conf-creator",
+  "name": "elastic-conf-creator",
   "version": "0.1.0",
   "description": "Creating a template based config for multiple systems",
   "main": "creator.js",
   "license": "MIT",
+  "owner": "Thorsten Moeller",
   "email": "tmoeller70@icloud.com",
   "repository": "npm/npm",
   "private": true,
