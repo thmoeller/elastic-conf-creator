@@ -1,64 +1,47 @@
 # elastic-conf-creator
+
 Creating logstash config files for a large number of servers from an input list based on a template
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+You will need node.js to be installede on your system 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Just copy files to the folder where you want to run the creator.
 
-Say what the step will be
+### Preparations
 
-```
-Give the example
-```
+Create logstash config file like you want to use it. 
 
-And repeat
+Insert tags as placeholders ( like <exampletag> )in the config file.
 
-```
-until finished
-```
+Create a input list file. Take care that the column names in the inputlist are the same like the placeholder names you want to use in the template, but with surrounding tag chars( e.g. column in inputlist  = username => placeholder in template = <username>). This is case sensitive.
 
-End with an example of getting some data out of the system or using it for a little demo
+## How to use
 
-## Running the tests
+Open a terminal or a command line and type following command
 
-Explain how to run the automated tests for this system
+`node creator.js template-file inputlist-file`
 
-### Break down into end to end tests
+## Output 
 
-Explain what these tests test and why
+Config file will always get the name from the values in the first column of the inputlist file
 
-```
-Give an example
-```
+## Process
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+    1. Create inputlist with the content you want to replace in the config
+    2. Create a teamplate config and set placeholders according to input list
+    3. Run creator.js (see Usage)
+    4. Deploy config files to logstash config folder
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [NodeJS](http://www.nodejs.org) - The javascript framework used
 
 ## Contributing
 
@@ -70,7 +53,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Thorsten Moeller** - *Initial work* - 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -81,5 +64,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
-* Inspiration
-* etc
+
